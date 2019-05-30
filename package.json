@@ -1,0 +1,15 @@
+{
+  "name": "personal",
+  "description": "Hopefully, a clean theme for personal blogging & showcase purposes.",
+  "version": "0.0.1",
+  "engines": {
+    "ghost": ">=2.0.0"
+  },
+  "author": {
+    "name": "Piotr Klosinski",
+    "email": "hello@piotrklosinski.me"
+  },
+  "config": {
+    "posts_per_page": 3
+  }
+}
