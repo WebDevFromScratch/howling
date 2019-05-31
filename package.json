@@ -11,5 +11,8 @@
   },
   "config": {
     "posts_per_page": 3
+  },
+  "devDependencies": {
+    "tailwindcss": "^1.0.2"
   }
 }
