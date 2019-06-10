@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@responsive {
+  .bg-gradient-gray-100-to-teal-600 {
+    background-image: linear-gradient(theme('colors.gray.100'), theme('colors.teal.700'));
+  }
+}

@@ -10,7 +10,7 @@
     "email": "hello@piotrklosinski.me"
   },
   "config": {
-    "posts_per_page": 12
+    "posts_per_page": 6
   },
   "devDependencies": {
     "tailwindcss": "^1.0.2"

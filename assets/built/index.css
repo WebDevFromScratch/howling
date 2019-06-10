@@ -7547,6 +7547,10 @@ video {
   z-index: auto;
 }
 
+.bg-gradient-gray-100-to-teal-600 {
+  background-image: linear-gradient(#f7fafc, #2c7a7b);
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;
@@ -14466,6 +14470,10 @@ video {
 
   .sm\:z-auto {
     z-index: auto;
+  }
+
+  .sm\:bg-gradient-gray-100-to-teal-600 {
+    background-image: linear-gradient(#f7fafc, #2c7a7b);
   }
 }
 
@@ -21389,6 +21397,10 @@ video {
   .md\:z-auto {
     z-index: auto;
   }
+
+  .md\:bg-gradient-gray-100-to-teal-600 {
+    background-image: linear-gradient(#f7fafc, #2c7a7b);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -28311,6 +28323,10 @@ video {
   .lg\:z-auto {
     z-index: auto;
   }
+
+  .lg\:bg-gradient-gray-100-to-teal-600 {
+    background-image: linear-gradient(#f7fafc, #2c7a7b);
+  }
 }
 
 @media (min-width: 1280px) {
@@ -35232,5 +35248,9 @@ video {
 
   .xl\:z-auto {
     z-index: auto;
+  }
+
+  .xl\:bg-gradient-gray-100-to-teal-600 {
+    background-image: linear-gradient(#f7fafc, #2c7a7b);
   }
 }
