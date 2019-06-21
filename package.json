@@ -1,7 +1,7 @@
 {
-  "name": "personal",
-  "description": "Hopefully, a clean theme for personal blogging & showcase purposes.",
-  "version": "0.0.1",
+  "name": "howling",
+  "description": "Ghost 2.0+ theme, build with Tailwind CSS framework.",
+  "version": "0.1.0",
   "engines": {
     "ghost": ">=2.0.0"
   },
