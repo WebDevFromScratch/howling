@@ -39,10 +39,10 @@
     height: 100%;
   }
 
-  .overlay-teal {
-    background-color: rgba(44, 122, 123, 0.4);
+  .overlay-black-alpha {
+    background-color: rgba(0, 0, 0, 0.2);
     /* TODO: improve after adding PostCSS to sth like: */
-    /* background-color: color(theme('colors.teal.700') a(40%)); */
+    /* background-color: color(theme('colors.black') a(20%)); */
   }
 }
 
@@ -52,4 +52,17 @@
   }
 
   .scale-1-1 { transform:scale(1.1); }
+}
+
+.ghost-post-content {
+  @apply font-sans;
+
+  /* TODO: we need scss first */
+  /* h1 {
+    @apply text-3xl mb-2;
+  }
+
+  h2 {
+    @apply text-2xl mb-2;
+  } */
 }
