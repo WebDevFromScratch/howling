@@ -40,8 +40,6 @@
   }
 
   .overlay-black-alpha {
-    /* background-color: rgba(0, 0, 0, 0.2); */
-    /* TODO: improve after adding PostCSS to sth like: */
     background-color: color(theme('colors.black') a(20%));
   }
 }
@@ -55,13 +53,68 @@
 }
 
 .ghost-post-content {
-  @apply font-sans;
+  @apply font-sans text-lg;
 
-  h1 {
-    @apply text-3xl mb-2;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-fira font-bold;
   }
 
-  h2 {
-    @apply text-2xl mb-2;
+  h1, h2 {
+    @apply text-4xl mb-4;
+  }
+
+  h3 {
+    @apply text-3xl mb-4;
+  }
+
+  p {
+    @apply mb-8;
+  }
+
+  ul, ol {
+    @apply mb-8;
+
+    li {
+      @apply mb-4;
+    }
+  }
+
+  ul {
+    @apply list-disc ml-5;
+  }
+
+  ol {
+    @apply list-decimal ml-4;
+  }
+
+  ol {
+    counter-reset: item;
+
+    li {
+      display: block;
+
+      &:before {
+        @apply -ml-4;
+        content: counter(item) ". ";
+        counter-increment: item;
+        font-weight: bold;
+      }
+    }
+  }
+
+  blockquote {
+    @apply font-serif text-xl italic mb-8 border-l-4 border-gray-300 pl-4;
+  }
+
+  pre {
+    @apply overflow-hidden bg-gray-100 mb-8 p-6 border border-gray-300 rounded-sm;
+  }
+
+  a {
+    @apply border-b border-teal-500;
+
+    &:hover {
+      color: theme('colors.teal.500');
+    }
   }
 }

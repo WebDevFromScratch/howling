@@ -1,8 +1,10 @@
 module.exports = {
   theme: {
     fontFamily: {
+      // TODO: add better fallbacks setup
       'sans': ['Source Sans Pro', 'sans-serif'],
-      'fira': ['Fira Sans', 'sans-serif']
+      'fira': ['Fira Sans', 'sans-serif'],
+      'serif': ['Source Serif Pro', 'serif']
     },
     extend: {}
   },
