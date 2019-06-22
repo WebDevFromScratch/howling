@@ -40,9 +40,9 @@
   }
 
   .overlay-black-alpha {
-    background-color: rgba(0, 0, 0, 0.2);
+    /* background-color: rgba(0, 0, 0, 0.2); */
     /* TODO: improve after adding PostCSS to sth like: */
-    /* background-color: color(theme('colors.black') a(20%)); */
+    background-color: color(theme('colors.black') a(20%));
   }
 }
 
@@ -57,12 +57,11 @@
 .ghost-post-content {
   @apply font-sans;
 
-  /* TODO: we need scss first */
-  /* h1 {
+  h1 {
     @apply text-3xl mb-2;
   }
 
   h2 {
     @apply text-2xl mb-2;
-  } */
+  }
 }

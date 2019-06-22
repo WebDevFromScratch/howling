@@ -17,4 +17,4 @@ A [Ghost](http://github.com/tryghost/ghost/) theme, made with
 
 To be added.
 
-Tailwind style building task: `npx tailwind build assets/css/index.css -o assets/built/index.css` (used from the root)
+To build styles, simply run `gulp`
