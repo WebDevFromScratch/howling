@@ -39,8 +39,12 @@
     height: 100%;
   }
 
-  .overlay-black-alpha {
+  .overlay-black-alpha-20 {
     background-color: color(theme('colors.black') a(20%));
+  }
+
+  .overlay-black-alpha-50 {
+    background-image: linear-gradient(color(theme('colors.black') a(80%)), color(theme('colors.black') a(0%)));
   }
 }
 
@@ -50,6 +54,15 @@
   }
 
   .scale-1-1 { transform:scale(1.1); }
+}
+
+.nav-item {
+  @apply trans-fast font-light font-sans text-lg text-gray-100 inline-block mr-6;
+
+  &:hover {
+    @apply border-b-2;
+    color: theme('colors.white');
+  }
 }
 
 .ghost-post-content {
@@ -107,13 +120,14 @@
   }
 
   pre {
-    @apply overflow-hidden bg-gray-100 mb-8 p-6 border border-gray-300 rounded-sm;
+    @apply overflow-scroll bg-gray-100 mb-8 p-6 border border-gray-300 rounded-sm;
   }
 
   a {
-    @apply border-b border-teal-500;
+    @apply border-b border-teal-500 trans;
 
     &:hover {
+      @apply border-b-2;
       color: theme('colors.teal.500');
     }
   }

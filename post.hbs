@@ -3,10 +3,17 @@
 {{#post}}
   <article>
     <header>
-      <header class="text-white pt-40 pb-10 lg:pt-64 lg:pb-16 bg-cover bg-center"
+      <div class="absolute overlay-black-alpha-50 w-full">
+        <nav class="flex container mx-auto px-4 pt-4 pb-20">
+          <a class="nav-item" href="#">Active</a>
+          <a class="nav-item" href="#">Link 1</a>
+          <a class="nav-item" href="#">Link 2</a>
+        </nav>
+      </div>
+      <header class="text-white pt-48 pb-24 lg:pt-64 lg:pb-32 bg-cover bg-center"
               style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url({{feature_image}});">
         <h1 class="font-fira font-bold text-5xl text-center">{{title}}</h1>
-        <h4 class="text-center" datetime="{{date format="YYYY-MM-DD"}}">
+        <h4 class="font-sans text-lg font-light text-center" datetime="{{date format="YYYY-MM-DD"}}">
           {{date format="D MMMM YYYY"}}
           &nbsp;&nbsp;|&nbsp;&nbsp;
           {{#primary_tag}}
@@ -15,10 +22,52 @@
         </h4>
       </header>
     </header>
-    <section class="container mx-auto p-4 ghost-post-content">
+    <section class="container mx-auto p-4 -mt-16 lg:-mt-20">
       <div class="w-full bg-white rounded shadow py-20 px-24">
-        {{content}}
+        <div class="ghost-post-content">
+          {{content}}
+        </div>
+
+        {{#has author="count:>1"}}
+          <!-- TODO: multiple authors avatars -->
+        {{else}}
+          <hr class="border-t border-gray-200 h-0 shadow-lg mt-16 mb-12" />
+          <div class="flex justify-end items-center">
+            {{#primary_author}}
+              <div class="text-sm mr-4 text-right">
+                <p class="font-bold text-2xl font-fira leading-none">
+                  <a href="{{url}}">{{name}}</a>
+                </p>
+                <p class="text-gray-700 font-light text-base font-sans">
+                  {{#if bio}}
+                    {{bio}}
+                  {{else}}
+                    Read <a href="{{url}}">more posts</a> by this author.
+                  {{/if}}
+                </p>
+              </div>
+              <a href="{{url}}">
+                {{#if profile_image}}
+                  <img class="w-16 h-16 rounded-full" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                {{else}}
+                  <img class="w-16 h-16 rounded-full" src="{{asset 'images/no-avatar.png'}}" alt="{{name}}" />
+                {{/if}}
+              </a>
+            {{/primary_author}}
+          </div>
+        {{/has}}
       </div>
     </section>
   </article>
 {{/post}}
+
+<footer class="bg-gradient-gray-200-to-teal-700 h-64">
+  <div class="container mx-auto mt-12 px-4">
+    <div class="h-12"></div>
+    <hr class="border-t border-gray-300 h-0 shadow-lg" />
+    <div class="flex text-gray-200 mt-12 tracking-wide text-xs">
+      <span class="w-1/2">Personal theme © 2019</span>
+      <span class="w-1/2 text-right">Published with <a href="#">Ghost</a></span>
+    </div>
+  </div>
+</footer>
