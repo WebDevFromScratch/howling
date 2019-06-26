@@ -12,6 +12,8 @@ A [Ghost](http://github.com/tryghost/ghost/) theme, made with
 - [ ] add custom pages
 - [ ] add better readme
 - [ ] add easy customisation possibilities
+- [ ] add different treating of posts without data like: image, tags, etc.
+- [ ] add different treating of collaborative posts
 
 # Development
 
