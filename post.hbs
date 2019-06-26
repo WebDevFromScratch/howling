@@ -5,8 +5,8 @@
     <header>
       <div class="text-white pt-48 pb-24 lg:pt-64 lg:pb-32 bg-cover bg-center"
               style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{feature_image}});">
-        <h1 class="font-fira font-bold text-5xl text-center">{{title}}</h1>
-        <h4 class="font-sans text-lg font-light text-center" datetime="{{date format="YYYY-MM-DD"}}">
+        <h1 class="font-display font-bold text-5xl text-center">{{title}}</h1>
+        <h4 class="font-body text-lg font-light text-center" datetime="{{date format="YYYY-MM-DD"}}">
           {{date format="D MMMM YYYY"}}
           &nbsp;&nbsp;|&nbsp;&nbsp;
           {{#primary_tag}}
@@ -28,10 +28,10 @@
           <div class="flex justify-end items-center">
             {{#primary_author}}
               <div class="text-sm mr-4 text-right">
-                <p class="font-bold text-2xl font-fira leading-none">
+                <p class="font-bold text-2xl font-display leading-none">
                   <a href="{{url}}">{{name}}</a>
                 </p>
-                <p class="text-gray-700 font-light text-base font-sans">
+                <p class="text-gray-700 font-light text-base font-body">
                   {{#if bio}}
                     {{bio}}
                   {{else}}
@@ -59,13 +59,13 @@
       <div class="flex-1 flex items-center h-64 w-full bg-white rounded shadow hover:shadow-xl trans-slow mr-2 px-12 py-10 lg:py-20 lg:px-24">
         <div>
           {{#prev_post}}
-            <h4 class="font-serif text-center text-lg">Previous post</h4>
+            <h4 class="font-body-secondary text-center text-lg">Previous post</h4>
             <a href="{{url}}">
-              <h3 class="font-fira font-bold text-center text-3xl">{{title}}</h3>
+              <h3 class="font-display font-bold text-center text-3xl">{{title}}</h3>
             </a>
           {{else}}
-            <h4 class="font-serif text-center text-lg">We're sorry, but this is the...</h4>
-            <h3 class="font-fira font-bold text-center text-3xl">First Post</h3>
+            <h4 class="font-body-secondary text-center text-lg">We're sorry, but this is the...</h4>
+            <h3 class="font-display font-bold text-center text-3xl">First Post</h3>
           {{/prev_post}}
         </div>
       </div>
@@ -73,13 +73,13 @@
       <div class="flex-1 flex items-center h-64 w-full bg-white rounded shadow hover:shadow-xl trans-slow ml-2 px-12 py-10 lg:py-20 lg:px-24">
         <div>
           {{#next_post}}
-            <h4 class="font-serif text-center text-lg">Next post</h4>
+            <h4 class="font-body-secondary text-center text-lg">Next post</h4>
             <a href="{{url}}">
-              <h3 class="font-fira font-bold text-center text-3xl">{{title}}</h3>
+              <h3 class="font-display font-bold text-center text-3xl">{{title}}</h3>
             </a>
           {{else}}
-            <h4 class="font-serif text-center text-lg">We're sorry, but this is the...</h4>
-            <h3 class="font-fira font-bold text-center text-3xl">Last Post</h3>
+            <h4 class="font-body-secondary text-center text-lg">We're sorry, but this is the...</h4>
+            <h3 class="font-display font-bold text-center text-3xl">Last Post</h3>
           {{/next_post}}
         </div>
       </div>

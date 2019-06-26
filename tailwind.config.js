@@ -2,9 +2,9 @@ module.exports = {
   theme: {
     fontFamily: {
       // TODO: add better fallbacks setup
-      'sans': ['Source Sans Pro', 'sans-serif'],
-      'fira': ['Fira Sans', 'sans-serif'],
-      'serif': ['Source Serif Pro', 'serif']
+      display: ['var(--font-family-display)', 'sans-serif'],
+      body: ['var(--font-family-body)', 'sans-serif'],
+      'body-secondary': ['var(--font-family-body-secondary)', 'serif'],
     },
     extend: {}
   },

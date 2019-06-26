@@ -2,11 +2,11 @@
 
 <header class="text-white pt-48 pb-24 lg:pt-64 lg:pb-32 bg-cover bg-center"
         style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{@site.cover_image}});">
-  <h1 class="font-fira font-bold text-5xl text-center">{{@blog.title}}</h1>
-  <h2 class="font-sans text-2xl text-center">{{@blog.description}}</h2>
+  <h1 class="font-display font-bold text-5xl text-center">{{@blog.title}}</h1>
+  <h2 class="font-body text-2xl text-center">{{@blog.description}}</h2>
 </header>
 
-<main class="container mx-auto font-sans p-4 -mt-16 lg:-mt-20">
+<main class="container mx-auto font-body p-4 -mt-16 lg:-mt-20">
   <div class="flex flex-wrap">
     {{#foreach posts}}
       <div class="group flex h-64 w-full mb-4 bg-white rounded shadow relative
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="w-full md:w-2/3 p-6">
-          <h1 class="font-bold font-fira text-2xl md:text-3xl mb-2 text-gray-800
+          <h1 class="font-bold font-display text-2xl md:text-3xl mb-2 text-gray-800
                      group-hover:text-black trans-slow">
             <a href={{url}}>{{title}}</a>
           </h1>

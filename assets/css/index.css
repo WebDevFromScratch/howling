@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-family-body: 'Source Sans Pro';
+  --font-family-body-secondary: 'Source Serif Pro';
+  --font-family-display: 'Fira Sans';
+}
+
 @responsive {
   .bg-gradient-gray-200-to-teal-700 {
     background-image: linear-gradient(theme('colors.gray.200'), theme('colors.teal.700'));
@@ -53,7 +59,7 @@
 }
 
 .nav-item {
-  @apply trans-fast font-light font-sans text-lg text-gray-100 inline-block mr-6;
+  @apply trans-fast font-light font-body text-lg text-gray-100 inline-block mr-6;
 
   &:hover {
     @apply border-b-2;
@@ -62,10 +68,10 @@
 }
 
 .ghost-post-content {
-  @apply font-sans text-lg;
+  @apply font-body text-lg;
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-fira font-bold;
+    @apply font-display font-bold;
   }
 
   h1, h2 {
@@ -112,7 +118,7 @@
   }
 
   blockquote {
-    @apply font-serif text-xl italic mb-8 border-l-4 border-gray-300 pl-4;
+    @apply font-body-secondary text-xl italic mb-8 border-l-4 border-gray-300 pl-4;
   }
 
   pre {
