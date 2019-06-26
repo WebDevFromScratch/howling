@@ -13,13 +13,7 @@
                   hover:shadow-xl trans-slow">
         {{#if primary_tag}}
           <div class="absolute bottom-0 left-0 z-10 p-6">
-            <a href="{{primary_tag.url}}">
-              <span class="inline-block bg-orange-100 rounded-full px-3 py-1
-                           text-sm text-orange-900 mr-2 group-hover:text-orange-100
-                           group-hover:bg-orange-700 trans-slow">
-                #{{primary_tag.name}}
-              </span>
-            </a>
+            {{> tag tag=primary_tag}}
           </div>
         {{/if}}
         <div class="absolute bottom-0 right-0 z-10 p-6">
