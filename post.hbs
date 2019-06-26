@@ -16,7 +16,7 @@
       </div>
     </header>
     <main class="container mx-auto p-4 -mt-16 lg:-mt-20">
-      <div class="w-full bg-white rounded shadow py-20 px-24">
+      <div class="w-full bg-white rounded shadow py-10 px-12 lg:py-20 lg:px-24">
         <div class="ghost-post-content">
           {{content}}
         </div>
@@ -52,15 +52,39 @@
       </div>
     </main>
   </article>
-{{/post}}
 
-<footer class="bg-gradient-gray-200-to-teal-700 h-64">
-  <div class="container mx-auto mt-12 px-4">
-    <div class="h-12"></div>
-    <hr class="border-t border-gray-300 h-0 shadow-lg" />
-    <div class="flex text-gray-200 mt-12 tracking-wide text-xs">
-      <span class="w-1/2">Personal theme © 2019</span>
-      <span class="w-1/2 text-right">Published with <a href="#">Ghost</a></span>
+  <div class="container mx-auto px-4">
+    <hr class="border-t border-gray-600 h-0 shadow-lg mt-6" />
+    <div class="flex mt-10">
+      <div class="flex-1 flex items-center h-64 w-full bg-white rounded shadow hover:shadow-xl trans-slow mr-2 px-12 py-10 lg:py-20 lg:px-24">
+        <div>
+          {{#prev_post}}
+            <h4 class="font-serif text-center text-lg">Previous post</h4>
+            <a href="{{url}}">
+              <h3 class="font-fira font-bold text-center text-3xl">{{title}}</h3>
+            </a>
+          {{else}}
+            <h4 class="font-serif text-center text-lg">We're sorry, but this is the...</h4>
+            <h3 class="font-fira font-bold text-center text-3xl">First Post</h3>
+          {{/prev_post}}
+        </div>
+      </div>
+
+      <div class="flex-1 flex items-center h-64 w-full bg-white rounded shadow hover:shadow-xl trans-slow ml-2 px-12 py-10 lg:py-20 lg:px-24">
+        <div>
+          {{#next_post}}
+            <h4 class="font-serif text-center text-lg">Next post</h4>
+            <a href="{{url}}">
+              <h3 class="font-fira font-bold text-center text-3xl">{{title}}</h3>
+            </a>
+          {{else}}
+            <h4 class="font-serif text-center text-lg">We're sorry, but this is the...</h4>
+            <h3 class="font-fira font-bold text-center text-3xl">Last Post</h3>
+          {{/next_post}}
+        </div>
+      </div>
     </div>
   </div>
-</footer>
+{{/post}}
+
+{{> simple_footer}}

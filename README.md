@@ -5,9 +5,9 @@ A [Ghost](http://github.com/tryghost/ghost/) theme, made with
 
 # Todos
 
-- [ ] build post view
-- [ ] add menu/navbar
-- [ ] extract footer properly
+- [x] build post view
+- [x] add menu/navbar
+- [x] extract footer properly - well, somewhat properly so far...
 - [ ] add author pages
 - [ ] add custom pages
 - [ ] add better readme
