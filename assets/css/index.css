@@ -39,12 +39,8 @@
     height: 100%;
   }
 
-  .overlay-black-alpha-20 {
-    background-color: color(theme('colors.black') a(20%));
-  }
-
-  .overlay-black-alpha-50 {
-    background-image: linear-gradient(color(theme('colors.black') a(80%)), color(theme('colors.black') a(0%)));
+  .overlay-black-alpha-30 {
+    background-color: color(theme('colors.black') a(30%));
   }
 }
 

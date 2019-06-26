@@ -3,15 +3,8 @@
 {{#post}}
   <article>
     <header>
-      <div class="absolute overlay-black-alpha-50 w-full">
-        <nav class="flex container mx-auto px-4 pt-4 pb-20">
-          <a class="nav-item" href="#">Active</a>
-          <a class="nav-item" href="#">Link 1</a>
-          <a class="nav-item" href="#">Link 2</a>
-        </nav>
-      </div>
-      <header class="text-white pt-48 pb-24 lg:pt-64 lg:pb-32 bg-cover bg-center"
-              style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url({{feature_image}});">
+      <div class="text-white pt-48 pb-24 lg:pt-64 lg:pb-32 bg-cover bg-center"
+              style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{feature_image}});">
         <h1 class="font-fira font-bold text-5xl text-center">{{title}}</h1>
         <h4 class="font-sans text-lg font-light text-center" datetime="{{date format="YYYY-MM-DD"}}">
           {{date format="D MMMM YYYY"}}
@@ -20,9 +13,9 @@
             <a href="{{url}}">#{{name}}</a>
           {{/primary_tag}}
         </h4>
-      </header>
+      </div>
     </header>
-    <section class="container mx-auto p-4 -mt-16 lg:-mt-20">
+    <main class="container mx-auto p-4 -mt-16 lg:-mt-20">
       <div class="w-full bg-white rounded shadow py-20 px-24">
         <div class="ghost-post-content">
           {{content}}
@@ -57,7 +50,7 @@
           </div>
         {{/has}}
       </div>
-    </section>
+    </main>
   </article>
 {{/post}}
 

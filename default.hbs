@@ -11,6 +11,10 @@
     <link rel="stylesheet" type="text/css" href="{{asset "built/index.css"}}" />
   </head>
   <body class="bg-gray-200">
+    {{#if @site.navigation}}
+      {{navigation}}
+    {{/if}}
+
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
     {{{body}}}
   </body>

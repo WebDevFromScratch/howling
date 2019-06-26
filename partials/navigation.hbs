@@ -1,0 +1,10 @@
+<div class="absolute w-full">
+  <nav class="flex container mx-auto px-4 pt-4 pb-24">
+    {{#foreach navigation}}
+      <a class="nav-item {{#if current}} border-b-2{{/if}}"
+         href="{{url absolute="true"}}">
+        {{label}}
+      </a>
+    {{/foreach}}
+  </nav>
+</div>
