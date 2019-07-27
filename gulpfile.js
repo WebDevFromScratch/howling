@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+const zip = require ('gulp-zip');
+const pkg = require('./package.json');
 
 gulp.task('css', () => {
   const postcss = require('gulp-postcss');
@@ -23,6 +25,12 @@ gulp.task('css', () => {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('assets/built/'));
 });
+
+gulp.task('zip', () =>
+  gulp.src(['./**/*', '!./node_modules/**', `!./${pkg.name}.zip`])
+    .pipe(zip(`./${pkg.name}.zip`))
+    .pipe(gulp.dest('.'))
+);
 
 // gulp.task('default', ['css']);
 gulp.task('default', gulp.series(['css']));
